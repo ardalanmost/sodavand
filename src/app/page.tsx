@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 export default function HomePage() {
   return (
@@ -24,54 +25,41 @@ export default function HomePage() {
             height: "72px",
           }}
         >
-          {/* Brand */}
-          <Link href="/" style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <div
-              style={{
-                width: "36px",
-                height: "36px",
-                borderRadius: "10px",
-                backgroundColor: "var(--accent)",
-                color: "#090D16",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontWeight: 800,
-                fontSize: "1.1rem",
-              }}
-            >
-              S
-            </div>
-            <div>
-              <div style={{ fontWeight: 800, fontSize: "1.05rem", color: "var(--text-main)", letterSpacing: "-0.01em" }}>
-                SODAVAND
-              </div>
-              <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>
-                Trading LLC • Dubai, UAE
-              </div>
-            </div>
+          {/* Logo */}
+          <Link href="/">
+            <Logo size={38} showText={true} />
           </Link>
 
-          {/* Links */}
+          {/* Clean Simplified Navigation */}
           <nav style={{ display: "flex", alignItems: "center", gap: "28px", fontSize: "0.9rem" }}>
-            <a href="#store">Sodavand Store</a>
-            <a href="#development">Software Development</a>
-            <Link href="/privacy" style={{ color: "var(--accent)" }}>
+            <a href="#what-we-do" style={{ color: "var(--text-body)" }}>
+              What We Do
+            </a>
+            <a href="#compliance" style={{ color: "var(--text-body)" }}>
+              Compliance & Security
+            </a>
+            <a href="#about" style={{ color: "var(--text-body)" }}>
+              About
+            </a>
+            <Link href="/privacy" style={{ color: "var(--accent)", fontWeight: 500 }}>
               Privacy Policy
             </Link>
-            <a href="#contact" className="btn btn-primary" style={{ padding: "8px 16px" }}>
+            <a href="#contact" className="btn btn-primary" style={{ padding: "8px 18px", fontSize: "0.85rem" }}>
               Contact
             </a>
           </nav>
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Main Content */}
       <main style={{ flex: 1 }}>
-        <section style={{ padding: "90px 0 60px", textAlign: "center" }}>
+        {/* Hero Section */}
+        <section style={{ padding: "85px 0 55px", textAlign: "center" }}>
           <div className="container" style={{ maxWidth: "780px" }}>
             <div style={{ marginBottom: "20px" }}>
-              <span className="tag">Commercial Entity • Dubai, United Arab Emirates</span>
+              <span className="tag">
+                Commercial Entity • Sharjah Media City (Shams), UAE
+              </span>
             </div>
 
             <h1 style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)", lineHeight: 1.2, marginBottom: "20px" }}>
@@ -79,16 +67,16 @@ export default function HomePage() {
             </h1>
 
             <p style={{ fontSize: "1.15rem", color: "var(--text-body)", lineHeight: 1.7, marginBottom: "36px" }}>
-              <strong>Sodavand Trading LLC</strong> is a company registered in the UAE. We operate online retail through <strong>Sodavand Store</strong> across marketplaces like Amazon, and we develop <strong>custom software</strong>, web applications, and automation tools.
+              <strong>Sodavand Trading LLC</strong> is a commercial company registered in Sharjah Media City (Shams), UAE. We operate digital retail channels through <strong>Sodavand Store</strong> across marketplaces like Amazon, and we build <strong>custom software</strong>, web applications, and automation tools.
             </p>
 
             <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
-              <a href="#store" className="btn btn-primary">
-                Sodavand Store &darr;
+              <a href="#what-we-do" className="btn btn-primary">
+                Explore Our Activities &darr;
               </a>
-              <a href="#development" className="btn btn-ghost">
-                Software Development &darr;
-              </a>
+              <Link href="/privacy" className="btn btn-ghost">
+                Privacy Policy &rarr;
+              </Link>
             </div>
           </div>
         </section>
@@ -104,77 +92,77 @@ export default function HomePage() {
               }}
             >
               {/* Pillar 1: Sodavand Store */}
-              <div id="store" className="card">
+              <div className="card">
                 <div
                   style={{
-                    width: "44px",
-                    height: "44px",
-                    borderRadius: "10px",
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "12px",
                     backgroundColor: "rgba(56, 189, 248, 0.12)",
                     color: "var(--accent)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "1.3rem",
+                    fontSize: "1.4rem",
                     marginBottom: "20px",
                   }}
                 >
                   🛒
                 </div>
-                <h2 style={{ fontSize: "1.5rem", marginBottom: "12px" }}>Sodavand Store</h2>
-                <div style={{ fontSize: "0.85rem", color: "var(--accent)", fontWeight: 600, marginBottom: "16px" }}>
+                <h2 style={{ fontSize: "1.5rem", marginBottom: "8px" }}>Sodavand Store</h2>
+                <div style={{ fontSize: "0.82rem", color: "var(--accent)", fontWeight: 600, letterSpacing: "0.05em", marginBottom: "16px" }}>
                   E-COMMERCE & DIGITAL RETAIL
                 </div>
                 <p style={{ color: "var(--text-body)", lineHeight: 1.7, marginBottom: "20px" }}>
-                  Through <strong>Sodavand Store</strong>, we manage end-to-end online retail operations in the UAE and GCC. We sell high-quality consumer products on major marketplaces such as <strong>Amazon.ae</strong> with Prime fulfillment.
+                  Through <strong>Sodavand Store</strong>, we manage direct-to-consumer online retail operations across the UAE and GCC. We sell curated products on major digital marketplaces such as <strong>Amazon.ae</strong> with Prime fulfillment.
                 </p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px", color: "var(--text-muted)", fontSize: "0.9rem" }}>
                   <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <span style={{ color: "var(--accent)" }}>✓</span> Active storefront on Amazon.ae & regional marketplaces
                   </li>
                   <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                    <span style={{ color: "var(--accent)" }}>✓</span> Brand development & sourcing (Home, Kitchen & Consumer Goods)
+                    <span style={{ color: "var(--accent)" }}>✓</span> Product sourcing & brand development
                   </li>
                   <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                    <span style={{ color: "var(--accent)" }}>✓</span> Amazon FBA inventory, storage, and fast customer delivery
+                    <span style={{ color: "var(--accent)" }}>✓</span> Full Amazon FBA warehousing, Prime logistics, and customer support
                   </li>
                 </ul>
               </div>
 
               {/* Pillar 2: Software Development */}
-              <div id="development" className="card">
+              <div className="card">
                 <div
                   style={{
-                    width: "44px",
-                    height: "44px",
-                    borderRadius: "10px",
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "12px",
                     backgroundColor: "rgba(37, 99, 235, 0.15)",
                     color: "#60A5FA",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "1.3rem",
+                    fontSize: "1.4rem",
                     marginBottom: "20px",
                   }}
                 >
                   💻
                 </div>
-                <h2 style={{ fontSize: "1.5rem", marginBottom: "12px" }}>Software Development</h2>
-                <div style={{ fontSize: "0.85rem", color: "#60A5FA", fontWeight: 600, marginBottom: "16px" }}>
+                <h2 style={{ fontSize: "1.5rem", marginBottom: "8px" }}>Software Development</h2>
+                <div style={{ fontSize: "0.82rem", color: "#60A5FA", fontWeight: 600, letterSpacing: "0.05em", marginBottom: "16px" }}>
                   ENGINEERING, TOOLS & INTEGRATIONS
                 </div>
                 <p style={{ color: "var(--text-body)", lineHeight: 1.7, marginBottom: "20px" }}>
-                  Alongside our store, we design and develop <strong>custom software applications</strong>, web platforms, and internal automation tools that streamline business operations and analytics.
+                  Alongside retail, we build <strong>custom software applications</strong>, web platforms, and internal automation tools designed to automate store operations, inventory management, and business intelligence.
                 </p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px", color: "var(--text-muted)", fontSize: "0.9rem" }}>
                   <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                    <span style={{ color: "#60A5FA" }}>✓</span> Full-stack web application & website development
+                    <span style={{ color: "#60A5FA" }}>✓</span> Modern web application and platform development
                   </li>
                   <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                    <span style={{ color: "#60A5FA" }}>✓</span> Amazon Selling Partner API (SP-API) & Ads API integrations
+                    <span style={{ color: "#60A5FA" }}>✓</span> Amazon Selling Partner API (SP-API) & Ads API integration
                   </li>
                   <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                    <span style={{ color: "#60A5FA" }}>✓</span> Custom inventory automation, pricing tools, and analytics dashboards
+                    <span style={{ color: "#60A5FA" }}>✓</span> Automated inventory forecasting, pricing tools, and financial reporting
                   </li>
                 </ul>
               </div>
@@ -182,8 +170,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Amazon Developer & Privacy Banner */}
-        <section style={{ padding: "40px 0 70px" }}>
+        {/* Amazon Developer & Privacy Compliance */}
+        <section id="compliance" style={{ padding: "30px 0 70px" }}>
           <div className="container">
             <div
               className="card"
@@ -205,7 +193,7 @@ export default function HomePage() {
                   Amazon Selling Partner API Compliance
                 </h3>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
-                  Our internal developer applications connect to Amazon APIs solely to manage Sodavand Store inventory, orders, and business reports. We do not store or share customer personal information with any third party.
+                  Our internal developer applications connect to Amazon APIs exclusively to manage Sodavand Store inventory, orders, and business reports. We strictly adhere to Amazon&apos;s Data Protection Policy with zero storage or resale of customer personal information.
                 </p>
               </div>
               <Link href="/privacy" className="btn btn-ghost" style={{ whiteSpace: "nowrap" }}>
@@ -215,22 +203,30 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* About & Contact */}
-        <section id="contact" style={{ padding: "60px 0 90px", borderTop: "1px solid var(--border)" }}>
-          <div className="container" style={{ maxWidth: "680px", textAlign: "center" }}>
-            <h2 style={{ fontSize: "1.8rem", marginBottom: "12px" }}>About & Contact</h2>
-            <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.7, marginBottom: "32px" }}>
-              <strong>Sodavand Trading LLC</strong> is registered in Dubai, United Arab Emirates. For business inquiries, software projects, or store partnerships, please contact us directly:
+        {/* About & Origin */}
+        <section id="about" style={{ padding: "60px 0 70px", borderTop: "1px solid var(--border)" }}>
+          <div className="container" style={{ maxWidth: "780px", textAlign: "center" }}>
+            <h2 style={{ fontSize: "1.8rem", marginBottom: "14px" }}>About Sodavand Trading LLC</h2>
+            <p style={{ color: "var(--text-body)", fontSize: "1rem", lineHeight: 1.8, marginBottom: "20px" }}>
+              The name <strong>Sodavand</strong> originates from the fusion of <em>Souda</em> (representing commerce, trade, and business enterprise) and <em>Vand</em> (signifying connection, affiliation, and unity). True to our name, we connect commercial retail with modern software engineering.
             </p>
+            <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.7 }}>
+              Incorporated under the commercial regulations of <strong>Sharjah Media City (Shams)</strong> in the United Arab Emirates, Sodavand Trading LLC operates both as an independent digital merchant and as a technology developer.
+            </p>
+          </div>
+        </section>
 
+        {/* Contact */}
+        <section id="contact" style={{ padding: "40px 0 90px" }}>
+          <div className="container" style={{ maxWidth: "680px" }}>
             <div
               className="card"
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: "20px",
+                gap: "24px",
                 textAlign: "left",
-                padding: "28px",
+                padding: "32px",
               }}
             >
               <div>
@@ -246,10 +242,10 @@ export default function HomePage() {
               </div>
               <div>
                 <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", textTransform: "uppercase" }}>
-                  Location
+                  Commercial Registration
                 </div>
                 <div style={{ color: "var(--text-main)", fontWeight: 600, fontSize: "1.05rem", marginTop: "4px" }}>
-                  Dubai, United Arab Emirates
+                  Sharjah Media City (Shams), UAE
                 </div>
               </div>
             </div>
@@ -276,8 +272,11 @@ export default function HomePage() {
             gap: "16px",
           }}
         >
-          <div>
-            © {new Date().getFullYear()} <strong>Sodavand Trading LLC</strong>. All rights reserved.
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <Logo size={24} showText={false} />
+            <span>
+              © {new Date().getFullYear()} <strong>Sodavand Trading LLC</strong>. All rights reserved.
+            </span>
           </div>
           <div style={{ display: "flex", gap: "20px" }}>
             <Link href="/privacy" style={{ color: "var(--text-body)" }}>

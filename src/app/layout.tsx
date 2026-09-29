@@ -3,21 +3,21 @@ import "@/app/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sodavand.net"),
-  title: "Sodavand Trading LLC | Enterprise E-Commerce & Cloud Software Solutions",
+  title: "Sodavand Trading LLC | E-Commerce Operations & Software Development",
   description:
-    "Sodavand Trading LLC is a licensed UAE commercial technology & trading firm specializing in automated e-commerce operations, proprietary ERP software, Amazon SP-API integrations, and algorithmic marketplace intelligence.",
+    "Sodavand Trading LLC is a licensed commercial entity in Sharjah Media City (Shams), UAE, operating Sodavand Store digital retail and developing custom software solutions and Amazon SP-API integrations.",
   keywords: [
     "Sodavand Trading LLC",
+    "Sodavand Store",
+    "Sharjah Media City Shams",
     "Amazon SP-API developer UAE",
-    "E-commerce ERP Dubai",
-    "Algorithmic PPC Amazon.ae",
-    "Marketplace data analytics UAE",
-    "Cloud retail automation GCC",
+    "E-commerce UAE",
+    "Software development Sharjah",
   ],
   openGraph: {
-    title: "Sodavand Trading LLC | Enterprise E-Commerce & Cloud Software Solutions",
+    title: "Sodavand Trading LLC | E-Commerce & Software Development",
     description:
-      "Bridging enterprise software engineering with high-velocity marketplace commerce in the UAE and GCC.",
+      "Operating digital retail through Sodavand Store and building modern software solutions in Sharjah Media City (Shams), UAE.",
     url: "https://sodavand.net",
     siteName: "Sodavand Trading LLC",
     locale: "en_US",
