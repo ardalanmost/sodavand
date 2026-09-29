@@ -1,55 +1,14 @@
 import React from "react";
 import Link from "next/link";
+import Navigation from "@/components/Navigation";
 import Logo from "@/components/Logo";
+import LogoSelector from "@/components/LogoSelector";
 
 export default function HomePage() {
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-      {/* Navigation */}
-      <header
-        style={{
-          borderBottom: "1px solid var(--border)",
-          backgroundColor: "rgba(9, 13, 22, 0.9)",
-          position: "sticky",
-          top: 0,
-          zIndex: 40,
-          backdropFilter: "blur(12px)",
-        }}
-      >
-        <div
-          className="container"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: "72px",
-          }}
-        >
-          {/* Logo */}
-          <Link href="/">
-            <Logo size={38} showText={true} />
-          </Link>
-
-          {/* Clean Simplified Navigation */}
-          <nav style={{ display: "flex", alignItems: "center", gap: "28px", fontSize: "0.9rem" }}>
-            <a href="#what-we-do" style={{ color: "var(--text-body)" }}>
-              What We Do
-            </a>
-            <a href="#compliance" style={{ color: "var(--text-body)" }}>
-              Compliance & Security
-            </a>
-            <a href="#about" style={{ color: "var(--text-body)" }}>
-              About
-            </a>
-            <Link href="/privacy" style={{ color: "var(--accent)", fontWeight: 500 }}>
-              Privacy Policy
-            </Link>
-            <a href="#contact" className="btn btn-primary" style={{ padding: "8px 18px", fontSize: "0.85rem" }}>
-              Contact
-            </a>
-          </nav>
-        </div>
-      </header>
+      {/* Interactive Navigation with Persian «س» as default */}
+      <Navigation />
 
       {/* Main Content */}
       <main style={{ flex: 1 }}>
@@ -81,8 +40,11 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Live Logo Concepts Comparison (Persian Seen vs Latin S) */}
+        <LogoSelector />
+
         {/* Two Core Pillars */}
-        <section id="what-we-do" style={{ padding: "50px 0 80px" }}>
+        <section id="what-we-do" style={{ padding: "60px 0 80px" }}>
           <div className="container">
             <div
               style={{
@@ -171,7 +133,7 @@ export default function HomePage() {
         </section>
 
         {/* Amazon Developer & Privacy Compliance */}
-        <section id="compliance" style={{ padding: "30px 0 70px" }}>
+        <section id="compliance" style={{ padding: "20px 0 70px" }}>
           <div className="container">
             <div
               className="card"
@@ -273,7 +235,7 @@ export default function HomePage() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <Logo size={24} showText={false} />
+            <Logo size={24} showText={false} variant="persian-seen" />
             <span>
               © {new Date().getFullYear()} <strong>Sodavand Trading LLC</strong>. All rights reserved.
             </span>
