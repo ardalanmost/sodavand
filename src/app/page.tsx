@@ -2,12 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Logo from "@/components/Logo";
-import LogoSelector from "@/components/LogoSelector";
 
 export default function HomePage() {
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-      {/* Interactive Navigation with Persian «س» as default */}
+      {/* Clean English Navigation */}
       <Navigation />
 
       {/* Main Content */}
@@ -40,11 +39,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Live Logo Concepts Comparison (Persian Seen vs Latin S) */}
-        <LogoSelector />
-
         {/* Two Core Pillars */}
-        <section id="what-we-do" style={{ padding: "60px 0 80px" }}>
+        <section id="what-we-do" style={{ padding: "50px 0 80px" }}>
           <div className="container">
             <div
               style={{
@@ -235,7 +231,7 @@ export default function HomePage() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <Logo size={24} showText={false} variant="persian-seen" />
+            <Logo size={24} showText={false} />
             <span>
               © {new Date().getFullYear()} <strong>Sodavand Trading LLC</strong>. All rights reserved.
             </span>

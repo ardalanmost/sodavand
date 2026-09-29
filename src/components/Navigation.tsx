@@ -1,12 +1,8 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import Logo, { LogoVariant } from "./Logo";
+import Logo from "./Logo";
 
 export default function Navigation() {
-  const [activeVariant, setActiveVariant] = useState<LogoVariant>("persian-seen");
-
   return (
     <header
       style={{
@@ -27,59 +23,12 @@ export default function Navigation() {
           height: "72px",
         }}
       >
-        {/* Brand Logo with clickable variant toggle */}
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <Link href="/">
-            <Logo size={38} showText={true} variant={activeVariant} />
-          </Link>
+        {/* Brand Logo with Persian Seen glyph */}
+        <Link href="/">
+          <Logo size={38} showText={true} />
+        </Link>
 
-          {/* Quick inline switcher pill */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              background: "rgba(255, 255, 255, 0.05)",
-              padding: "2px",
-              borderRadius: "8px",
-              border: "1px solid var(--border)",
-              fontSize: "0.75rem",
-              marginLeft: "8px",
-            }}
-          >
-            <button
-              onClick={() => setActiveVariant("persian-seen")}
-              style={{
-                background: activeVariant === "persian-seen" ? "var(--accent)" : "transparent",
-                color: activeVariant === "persian-seen" ? "#090D16" : "var(--text-muted)",
-                border: "none",
-                borderRadius: "6px",
-                padding: "3px 8px",
-                fontWeight: 700,
-                cursor: "pointer",
-              }}
-              title="لوگوی حرف سین فارسی"
-            >
-              سین «س»
-            </button>
-            <button
-              onClick={() => setActiveVariant("latin-s")}
-              style={{
-                background: activeVariant === "latin-s" ? "var(--accent)" : "transparent",
-                color: activeVariant === "latin-s" ? "#090D16" : "var(--text-muted)",
-                border: "none",
-                borderRadius: "6px",
-                padding: "3px 8px",
-                fontWeight: 700,
-                cursor: "pointer",
-              }}
-              title="لوگوی لاتین S"
-            >
-              Latin S
-            </button>
-          </div>
-        </div>
-
-        {/* Links */}
+        {/* Clean English Navigation */}
         <nav style={{ display: "flex", alignItems: "center", gap: "28px", fontSize: "0.9rem" }}>
           <a href="#what-we-do" style={{ color: "var(--text-body)" }}>
             What We Do
