@@ -37,20 +37,17 @@ export default function Navigation() {
             fontSize: "0.9rem",
           }}
         >
-          <a href="#operations" className="nav-link">
-            Operations
-          </a>
-          <a href="#portfolio" className="nav-link">
-            Brands & Products
-          </a>
-          <a href="#technology" className="nav-link">
-            Technology
-          </a>
           <a href="#about" className="nav-link">
             About Us
           </a>
+          <a href="#ecommerce" className="nav-link">
+            E-Commerce
+          </a>
+          <a href="#software" className="nav-link">
+            Software & AI
+          </a>
           <Link href="/privacy" className="nav-link" style={{ color: "var(--text-muted)" }}>
-            Privacy
+            Privacy Policy
           </Link>
           <a href="#contact" className="btn btn-primary" style={{ padding: "8px 18px", fontSize: "0.85rem" }}>
             Contact Us
