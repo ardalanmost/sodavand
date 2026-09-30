@@ -3,28 +3,33 @@ import "@/app/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sodavand.net"),
-  title: "Sodavand Trading LLC | E-Commerce Operations & Software Development",
+  title: "Sodavand Trading LLC | Commerce, Technology & AI Automation",
   description:
-    "Sodavand Trading LLC is a licensed commercial entity in Sharjah Media City (Shams), UAE, operating Sodavand Store digital retail and developing custom software solutions and Amazon SP-API integrations.",
+    "Sodavand Trading LLC is a licensed commercial entity in Sharjah Media City (Shams), UAE, operating consumer brands including MAVoLo and building modern software, business automations, and intelligent AI agents.",
   keywords: [
     "Sodavand Trading LLC",
-    "Sodavand Store",
+    "Sodavand",
+    "MAVoLo",
     "Sharjah Media City Shams",
-    "Amazon SP-API developer UAE",
     "E-commerce UAE",
-    "Software development Sharjah",
+    "Software development UAE",
+    "AI agents UAE",
   ],
   openGraph: {
-    title: "Sodavand Trading LLC | E-Commerce & Software Development",
+    title: "Sodavand Trading LLC | Commerce, Technology & AI Automation",
     description:
-      "Operating digital retail through Sodavand Store and building modern software solutions in Sharjah Media City (Shams), UAE.",
+      "Consumer e-commerce brands and modern software, automations, and AI agents in Sharjah Media City (Shams), UAE.",
     url: "https://sodavand.net",
     siteName: "Sodavand Trading LLC",
     locale: "en_US",
     type: "website",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/icon-192.png",
   },
 };
 
